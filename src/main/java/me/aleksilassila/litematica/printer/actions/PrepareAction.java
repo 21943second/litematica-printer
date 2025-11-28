@@ -69,7 +69,8 @@ public class PrepareAction extends Action {
                 } else {
                     // TODO --> test this (pickFromInventory has been REMOVED)
                     //client.interactionManager.pickFromInventory(slot);
-                    InventoryUtils.setPickedItemToHand(slot, itemStack, client);
+                    ItemStack destinationStack = inventory.getStack(slot);
+                    InventoryUtils.setPickedItemToHand(slot, destinationStack, client);
                 }
             }
         }
